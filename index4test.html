@@ -166,7 +166,7 @@ let errorBuffer;
 
 async function loadSound() {
     audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    const response = await fetch("sounds/error.wav");
+    const response = await fetch("chord.wav");
     const arrayBuffer = await response.arrayBuffer();
     errorBuffer = await audioContext.decodeAudioData(arrayBuffer);
 }
