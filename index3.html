@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolás Videla</title>
+
+<style>
+body{
+    margin:0;
+    font-family:sans-serif;
+    background:#008080;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    /*margin-top:8vh;*/
+    margin-top:30px;
+}
+
+.card{
+    /*background:#C0C0C0;*/
+    padding:25px; /* Antes 30px */
+    width:260px;
+    text-align:center;
+    /*box-shadow:0 5px 15px #0000001a;*/
+
+    background: #C0C0C0;
+    border: 3px solid; /* 2px */
+    /*border-color: #E6E6E6 #808080 #808080 #E6E6E6;*/
+    border-color: #FFFFFF #808080 #676767 #E6E6E6;
+    box-shadow: 1px 1px 0 0 #000000;
+}
+
+.top-text{
+    font-size:12px;
+    /*margin-bottom:15px;*/
+    /*margin: -25px -25px 15px -25px;*/
+    margin: -25px -25px 0px -25px; /* ¡Corrección! */
+
+    /* == Testeando... == */
+    /*background: #000080;*/
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    /* == Fin Test == */
+}
+
+.close-button { /* == Inicio otro test == */
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    padding: 0;
+    background: #C0C0C0;
+
+    border: 1px solid;
+    /*border-color: #FFFFFF #808080 #808080 #FFFFFF;*/
+    border-color: #FFFFFF #808080 #676767 #E6E6E6;
+    box-shadow: 1px 1px 0 0 #000000;
+
+    margin-right: -2px; /* ¡Corrección! */
+}
+
+.close-button:active {
+    border: 1px solid;
+    /*border-color: #808080 #FFFFFF #FFFFFF #808080;*/
+    border-color: #676767 #E6E6E6 #FFFFFF #808080;
+    box-shadow: 0 0 0 0 #000000;
+    transform: translate(1px,1px);
+} /* == Fin otro test == */
+
+img{
+    width:150px; /* Antes 80px Despues 100px */
+    /*margin-bottom:15px;*/
+    margin:15px auto;
+
+    border: 2px solid;
+    /*border-color: #808080 #FFFFFF #FFFFFF #808080;*/
+    border-color: #676767 #E6E6E6 #FFFFFF #808080;
+    box-shadow: 0 0 0 0 #000000;
+    display: block;
+}
+
+h1{
+    margin:15px 0 5px 0;
+    font-size:20px;
+}
+
+.subtitle{
+    font-size:14px;
+    /*margin-bottom:15px;*/
+    margin: 5px 0 15px 0;
+}
+
+a.button{
+    display:block;
+    text-decoration:none;
+    background:#C0C0C0;
+    color:#000000;
+    padding:10px 0;
+    margin:12px 0 0 0;
+
+    border: 2px solid;
+    /*border-color: #FFFFFF #808080 #808080 #FFFFFF;*/
+    border-color: #FFFFFF #808080 #676767 #E6E6E6;
+    box-shadow: 1px 1px 0 0 #000000;
+}
+
+a.button:active {
+    border: 2px solid;
+    /*border-color: #808080 #FFFFFF #FFFFFF #808080;*/
+    border-color: #676767 #E6E6E6 #FFFFFF #808080;
+    box-shadow: 0 0 0 0 #000000;
+    transform: translate(1px,1px);
+}
+
+footer{
+    margin-top:auto;
+    margin-bottom: 15px;
+    text-align:center;
+    padding:15px 0;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <!-- <div class="top-text">Pequeña línea superior</div> -->
+        <!-- === Inicio Test === -->
+        <div class="top-text">
+            Nicolás Videla
+            <button class="close-button">⨯</button>
+        </div>
+        <!-- === Fin Test === -->
+
+        <!-- <img src="https://via.placeholder.com/80" alt="Imagen"> -->
+        <img src="https://picsum.photos/100/100" alt="Imagen">
+        <h1>Nicolás Videla</h1>
+        <div class="subtitle">🦅 Live to ride. Ride to live. 🦅</div>
+
+        <a href="#" class="button">Blog</a>
+        <a href="#" class="button">Telegram</a>
+        <a href="#" class="button">E-mail</a>
+    </div>
+</div>
+
+<footer>
+    © 2026 Nicolás Videla
+</footer>
+
+<script>
+const closeButton = document.querySelector(".close-button");
+const errorSound = new Audio("chord.wav");
+
+closeButton.addEventListener("click", function() {
+    errorSound.currentTime = 0; // reinicia el sonido
+    errorSound.play();
+});
+</script>
+
+</body>
+</html>
